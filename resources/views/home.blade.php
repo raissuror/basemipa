@@ -1,14 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-    @include('layouts.partials.header', [
-        'title' => __('Hello') . ' '. auth()->user()->name,
-        'description' => __('Selamat Datang ke Website Database Kema FMIPA UNPAD'),
-        'class' => 'col-lg-12'
-    ])   
-    @include('layouts.headers.cards')
-    
-    
+    @include('layouts.headers.cards')  
 @endsection
 
 @push('js')

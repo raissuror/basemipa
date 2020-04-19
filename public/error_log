@@ -1,0 +1,2 @@
+[20-Jan-2020 09:30:14 UTC] PHP Fatal error:  Maximum execution time of 30 seconds exceeded in /home/basx5959/basemipa/vendor/laravel/framework/src/Illuminate/Hashing/BcryptHasher.php on line 48
+[01-Apr-2020 06:54:46 UTC] PHP Fatal error:  Maximum execution time of 30 seconds exceeded in /home/basx5959/basemipa/vendor/laravel/framework/src/Illuminate/Hashing/BcryptHasher.php on line 48
