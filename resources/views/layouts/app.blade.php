@@ -45,12 +45,10 @@
             <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                 @csrf
             </form>
-            @include('layouts.navbars.sidebar')
         @endauth
         
         <div class="main-content">
             @include('layouts.headers.header-dark')
-            @yield('content')
         </div>
 
         @guest()

@@ -1,5 +1,5 @@
-<div class="header bg-gradient-abhirama pb-8 pt-2 pt-md-8">
-    <div class="container-fluid">
+<div class="content-wrapper header bg-gradient-abhirama pb-8 pt-2 pt-md-8">
+    <div class="content container-fluid">
         <div class="header-body">
             <!-- Card stats -->
             <div class="row">
