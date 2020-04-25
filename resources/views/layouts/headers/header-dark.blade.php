@@ -1,4 +1,4 @@
-<body class="header-fixed sidebar-fixed sidebar-dark header-light" id="body">
+
   
   <script>
     NProgress.configure({ showSpinner: false });
@@ -9,19 +9,6 @@
 
   <div class="wrapper">
     <!-- Github Link -->
-    <a href="https://github.com/tafcoder/sleek-dashboard"  target="_blank" class="github-link">
-      <svg width="70" height="70" viewBox="0 0 250 250" aria-hidden="true">
-        <defs>
-          <linearGradient id="grad1" x1="0%" y1="75%" x2="100%" y2="0%">
-            <stop offset="0%" style="stop-color:#896def;stop-opacity:1" />
-            <stop offset="100%" style="stop-color:#482271;stop-opacity:1" />
-          </linearGradient>
-        </defs>
-        <path d="M 0,0 L115,115 L115,115 L142,142 L250,250 L250,0 Z" fill="url(#grad1)"></path>
-      </svg>
-      <i class="mdi mdi-github-circle"></i>
-    </a>
-
             <!--
           ====================================
           ——— LEFT SIDEBAR WITH FOOTER
@@ -31,7 +18,7 @@
           <div id="sidebar" class="sidebar sidebar-with-footer">
             <!-- Aplication Brand -->
             <div class="app-brand">
-              <a href="/index.html" title="Sleek Dashboard">
+              <a href="/home" title="Sleek Dashboard">
                 <svg
                   class="brand-icon"
                   xmlns="http://www.w3.org/2000/svg"
@@ -151,7 +138,7 @@
                       data-parent="#sidebar-menu">
                       <div class="sub-menu">                          
                             <li >
-                              <a class="sidenav-item-link" href="index.html">
+                              <a class="sidenav-item-link" href="{{ route('achievement') }}">
                                 <span class="nav-text">Ecommerce</span>
                                 
                               </a>
@@ -415,5 +402,40 @@
   <script src="{{ asset('assets/plugins/slimscrollbar/jquery.slimscroll.min.js') }}"></script>
   <script src="{{ asset('assets/plugins/jekyll-search.min.js') }}"></script>
   <script src="{{ asset('assets/js/sleek.bundle.js') }}"></script>
-</body>
+
+  <!--Table JS-->
+    <script src="assets/plugins/daterangepicker/moment.min.js"></script>
+    <script src="assets/plugins/daterangepicker/daterangepicker.js"></script>
+    <script src="assets/plugins/data-tables/jquery.datatables.min.js"></script>
+    <script src="assets/plugins/data-tables/datatables.bootstrap4.min.js"></script>
+    <script src="assets/plugins/data-tables/datatables.responsive.min.js"></script>
+    <script src="assets/js/sleek.bundle.js"></script>
+    <script>
+      jQuery(document).ready(function() {
+          jQuery('input[name="dateRange"]').daterangepicker({
+          autoUpdateInput: false,
+          singleDatePicker: true,
+          locale: {
+          cancelLabel: 'Clear'
+          }
+      });
+          jQuery('input[name="dateRange"]').on('apply.daterangepicker', function (ev, picker) {
+          jQuery(this).val(picker.startDate.format('MM/DD/YYYY'));
+          });
+          jQuery('input[name="dateRange"]').on('cancel.daterangepicker', function (ev, picker) {
+          jQuery(this).val('');
+          });
+      });
+    </script>
+    
+    <script>
+    jQuery(document).ready(function() {
+        jQuery('#responsive-data-table').DataTable({
+        "aLengthMenu": [[20, 30, 50, 75, -1], [20, 30, 50, 75, "All"]],
+        "pageLength": 20,
+        "dom": '<"row justify-content-between top-information"lf>rt<"row justify-content-between bottom-information"ip><"clear">'
+        });
+    });
+    </script>
+
 

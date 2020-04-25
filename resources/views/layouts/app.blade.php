@@ -38,9 +38,17 @@
         <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
         <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 
+        <!-- TABLE CSS -->
+        <link href="{{ asset('assets/plugins/data-tables/datatables.bootstrap4.min.css') }}" rel="stylesheet">
+        <link href="{{ asset('assets/plugins/daterangepicker/daterangepicker.css') }}" rel="stylesheet">
+        <link href="{{ asset('assets/plugins/data-tables/datatables.bootstrap4.min.css') }}" rel="stylesheet">
+        <link href="{{ asset('assets/plugins/data-tables/responsive.datatables.min.css') }}" rel="stylesheet">
+        <link href="https://unpkg.com/sleek-dashboard/dist/assets/css/sleek.min.css" rel="stylesheet" />
+
+
 
     </head>
-    <body class="{{ $class ?? '' }}">
+    <body class="header-fixed sidebar-fixed sidebar-dark header-light" id="body">
         @auth()
             <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                 @csrf
@@ -59,13 +67,17 @@
         <script src="{{ asset('vendor/bootstrap/dist/js/bootstrap.bundle.min.js') }}"></script>
         
         @stack('js')
-        
-        <!-- Argon JS -->
+
+    </body>
+    <!-- Argon JS -->
         <script src="{{ asset('js/argon.js') }}"></script>
         <script src="{{ asset('assets/plugins/jquery/jquery.min.js') }}"></script>
         <script src="{{ asset('assets/plugins/slimscrollbar/jquery.slimscroll.min.js') }}"></script>
         <script src="{{ asset('assets/plugins/jekyll-search.min.js') }}"></script>
         <script src="{{ asset('assets/js/sleek.bundle.js') }}"></script>
 
-    </body>
+        <!-- Table JS -->
+        <script src="{{ asset('assets/plugins/data-tables/jquery.datatables.min.js') }}"></script>
+        <script src="{{ asset('assets/plugins/data-tables/datatables.bootstrap4.min.js') }}"></script>
+        <script src="{{ asset('assets/plugins/data-tables/datatables.responsive.min.js') }}"></script>
 </html>
