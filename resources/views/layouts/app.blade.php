@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!--DOCTYPE html-->
 <html lang="en">
     <head>
         <meta charset="utf-8">
@@ -58,10 +58,6 @@
         <div class="main-content">
             @include('layouts.headers.header-dark')
         </div>
-
-        @guest()
-            @include('layouts.footers.guest')
-        @endguest
 
         <script src="{{ asset('vendor/jquery/dist/jquery.min.js') }}"></script>
         <script src="{{ asset('vendor/bootstrap/dist/js/bootstrap.bundle.min.js') }}"></script>

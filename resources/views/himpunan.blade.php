@@ -145,7 +145,6 @@
     </div>
 </div>
 
-@include('layouts.footers.auth')
 
 @endsection
 
